@@ -4,6 +4,7 @@ import mysql.connector
 import datetime
 import simplejson as json
 
+
 from flask import Flask, render_template
 app = Flask(__name__)
 
