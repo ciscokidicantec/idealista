@@ -1,12 +1,14 @@
 # environment PS S:\pythoncode> estate/scripts/activate
+# created github repository idealista
+
 
 import mysql.connector
 import datetime
 import simplejson as json
 
-
 from flask import Flask, render_template
 app = Flask(__name__)
+
 
 @app.route("/")
 def db():
@@ -37,6 +39,7 @@ def db():
         "image path = ",dictitem['imagepath'],
         "price = £{}".format(dictitem['price'])
     )  
+
 
 
 # change dictionery to a json string for javascript
@@ -167,6 +170,7 @@ def index():
   return render_template("index.html", new_year=new_year, jsonrow=jsonrow)
 
 #  return render_template("index.html", new_year=new_year, stud_json=stud_json)
+
 
 if __name__ == "__main__":
   app.run(debug=True)
